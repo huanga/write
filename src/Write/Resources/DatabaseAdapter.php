@@ -3,7 +3,7 @@ namespace Write\Resources;
 
 use Phalcon\Db\Adapter\Pdo\Mysql as PhalconPDOMySQL;
 
-class DatabaseAdapter {
+class DatabaseAdapter extends AbstractResource {
 	public function __construct() {
 		$configuration = array(
 			'host'     => 'localhost',
