@@ -1,9 +1,7 @@
 <?php
 namespace Write\Controller;
 
-use Phalcon\Mvc\Controller;
-
-class SessionController extends Controller {
+class SessionController extends AbstractController {
 	public function IndexAction() {
 		$this->dispatcher->forward(array(
 			'action' => 'new'

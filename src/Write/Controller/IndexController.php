@@ -1,9 +1,7 @@
 <?php
 namespace Write\Controller;
 
-use Phalcon\Mvc\Controller;
-
-class IndexController extends Controller {
+class IndexController extends AbstractController {
 	public function IndexAction() {
 
 	}
