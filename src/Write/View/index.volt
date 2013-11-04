@@ -13,7 +13,9 @@
     </head>
     <body>
         <div id="container">
+
             {{ get_content() }}
+
         </div>
         {{ javascript_include('https://code.jquery.com/jquery.js') }}
         {{ javascript_include('//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js') }}
