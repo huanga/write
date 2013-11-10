@@ -5,6 +5,7 @@ use Phalcon\Db\Adapter\Pdo\Mysql as PhalconPDOMySQL;
 
 class DatabaseAdapter extends AbstractResource {
 	public function __construct() {
+		// TODO: Refactor this to use Phalcon\Config via injection
 		$configuration = array(
 			'host'     => 'localhost',
 			'dbname'   => 'write',
