@@ -9,22 +9,25 @@ use Write\Resources\SessionManager;
 use Write\Resources\ViewManager;
 use Write\Resources\VoltTemplateEngine;
 
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 
 try {
+
 	$dependencyInjector = new DependencyInjector();
+	$dispatcher         = new Dispatcher( $dependencyInjector );
+	$viewManager        = new ViewManager( $dependencyInjector );
+	$voltTemplateEngine = new VoltTemplateEngine( $viewManager, $dependencyInjector );
 
-	$dependencyInjector->set( 'dispatcher', new Dispatcher( $dependencyInjector )       );
-	$dependencyInjector->set( 'router',     new Router()                                );
-	$dependencyInjector->set( 'session',    function() { return new SessionManager(); } );
-	$viewManager = new ViewManager( $dependencyInjector );
-	$dependencyInjector->set( 'view',       $viewManager, true                          );
-	$volt = new VoltTemplateEngine( $viewManager, $dependencyInjector );
-	$dependencyInjector->set( 'volt',       $volt, true                                 );
+	$dependencyInjector->set( 'dispatcher', $dispatcher                         );
+	$dependencyInjector->set( 'router',     'Write\\Resources\\Router'          );
+	$dependencyInjector->set( 'session',    'Write\\Resources\\SessionManager'  );
+	$dependencyInjector->set( 'view',       $viewManager, true                  );
+	$dependencyInjector->set( 'volt',       $voltTemplateEngine, true           );
+	$dependencyInjector->set( 'db',         'Write\\Resources\\DatabaseAdapter' );
+
 	$application = new Application( $dependencyInjector );
-	$dependencyInjector->set( 'db',         new DatabaseAdapter()                       );
-
 	echo $application->handle()->getContent();
+
 } catch( PhalconException $e ) {
 	die(
 		'<pre>' .

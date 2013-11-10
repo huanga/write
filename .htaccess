@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /write/index.php?_url=/front/get/$1
+RewriteRule ^$ /write/index.php?_url=/front/get/

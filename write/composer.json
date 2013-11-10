@@ -1,0 +1,20 @@
+{
+    "name": "huanga/write",
+    "description": "A simple markdown based blogging system written in PHP.",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Andy Huang",
+            "email": "andy.huang@terrandin.com"
+        }
+    ],
+    "require" : {
+	    "kzykhys/ciconia": "dev-master",
+        "phalcon/devtools": "dev-master"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Write" : "./"
+        }
+    }
+}
