@@ -9,6 +9,8 @@ use Write\Resources\SessionManager;
 use Write\Resources\ViewManager;
 use Write\Resources\VoltTemplateEngine;
 
+define( 'APPPATH', __DIR__ );
+
 require './vendor/autoload.php';
 
 try {
