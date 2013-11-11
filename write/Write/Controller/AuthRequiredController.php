@@ -1,7 +1,7 @@
 <?php
 namespace Write\Controller;
 
-use Write\Model\User;
+use Write\Model\Db\User;
 
 class AuthRequiredController extends AbstractController {
 	public function initialize() {

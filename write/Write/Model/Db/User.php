@@ -1,9 +1,10 @@
 <?php
-namespace Write\Model;
+namespace Write\Model\Db;
 
 use Phalcon\Security as PhalconSecurity;
+use Write\Model\AbstractPhalconModel;
 
-class User extends AbstractModel {
+class User extends AbstractPhalconModel {
 	protected $hash;
 	protected $id;
 	protected $picture;
