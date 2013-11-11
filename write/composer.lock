@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ec947b0f73512a1965915fb3aac80742",
+    "hash": "76b445e3956c32947856794556fa91ed",
     "packages": [
         {
             "name": "kzykhys/ciconia",
@@ -94,6 +94,47 @@
                 "phalcon"
             ],
             "time": "2013-11-08 18:48:10"
+        },
+        {
+            "name": "phalcon/incubator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phalcon/incubator.git",
+                "reference": "2c346fd185371747a9de91f294485f72393c1f9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phalcon/incubator/zipball/2c346fd185371747a9de91f294485f72393c1f9a",
+                "reference": "2c346fd185371747a9de91f294485f72393c1f9a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phalcon": "Library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Phalcon Team",
+                    "email": "team@phalconphp.com"
+                }
+            ],
+            "description": "Adapters, prototypes or functionality that can be potentially incorporated to the C-framework.",
+            "homepage": "http://phalconphp.com",
+            "keywords": [
+                "framework",
+                "phalcon"
+            ],
+            "time": "2013-11-05 10:25:21"
         },
         {
             "name": "symfony/console",
@@ -210,6 +251,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "kzykhys/ciconia": 20,
+        "phalcon/incubator": 20,
         "phalcon/devtools": 20
     },
     "platform": [

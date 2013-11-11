@@ -10,6 +10,7 @@
     ],
     "require" : {
 	    "kzykhys/ciconia": "dev-master",
+	    "phalcon/incubator": "dev-master",
         "phalcon/devtools": "dev-master"
     },
     "autoload" : {
