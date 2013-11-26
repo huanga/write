@@ -76,6 +76,7 @@ class FrontController extends AbstractController
             throw new NotFoundException( '404 Not found!' );
         }
 
+	$this->view->pick('Front/get');
         $this->view->setVar('pagebody', $pagebody);
     }
 
@@ -92,7 +93,7 @@ class FrontController extends AbstractController
             $pagebody .= $this->_getContent($path);
             $shown++;
 
-            if ($shown > 10) {
+            if ($shown > 30) {
                 break;
             }
         }
