@@ -15,9 +15,9 @@ abstract class AbstractPhalconCache extends AbstractModel implements ArrayAccess
     public function __construct($di)
     {
         $this->_di = $di;
-        $this->load();
-
-        $this->_initialize();
+        if ( $this->load() === false ) {
+            $this->_initialize();
+        }
     }
 
     abstract protected function _initialize();
@@ -42,10 +42,13 @@ abstract class AbstractPhalconCache extends AbstractModel implements ArrayAccess
 
     /**
      * Load persisted data from cache
+     *
+     * @return boolean
      */
     public function load()
     {
-        // TODO: IMPLEMENT LOADING FROM CACHE
+
+        return false;
     }
 
     /**
@@ -119,10 +122,14 @@ abstract class AbstractPhalconCache extends AbstractModel implements ArrayAccess
 
     /**
      * Persists data into cache
+     *
+     * @return boolean
      */
     public function save()
     {
         // TODO: IMPLEMENT SAVING TO CACHE
+
+        return false;
     }
 
     /**

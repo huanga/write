@@ -3,6 +3,7 @@ namespace Write\Controller;
 
 use Ciconia\Ciconia;
 use Ciconia\Extension\Gfm;
+use Write\Exception\HTTP\NotFoundException;
 use Write\Model\Cache\FileListCache;
 
 class FrontController extends AbstractController
@@ -62,16 +63,17 @@ class FrontController extends AbstractController
         if (empty($params)) {
             $this->dispatcher->forward(
                 array(
-                    'action' => 'Homepage'
+                    'controller' => 'front',
+                    'action' => 'homepage'
                 )
             );
+            return false;
         }
         $path = DATADIR . implode('/', $params);
         $pagebody = $this->_getContent($path);
 
         if ($pagebody === null) {
-            // TODO: Deal with 404's better!
-            $pagebody = '404 Not found!';
+            throw new NotFoundException( '404 Not found!' );
         }
 
         $this->view->setVar('pagebody', $pagebody);

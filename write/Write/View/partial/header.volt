@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="/write/assets/style.css" />
         <link rel="stylesheet" href="/write/assets/write.css" />
+        <link rel="stylesheet" href="{{ categoryCSSFile }}" />
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
