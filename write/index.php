@@ -1,4 +1,5 @@
 <?php
+use Phalcon\Config;
 use Phalcon\Exception as PhalconException;
 use Write\Resources\Application;
 use Write\Resources\DatabaseAdapter;
@@ -12,15 +13,17 @@ use Write\Resources\VoltTemplateEngine;
 define('APPPATH', __DIR__);
 define('DATADIR', APPPATH . '/data/');
 
+defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+
 require './vendor/autoload.php';
 
 try {
-
     $dependencyInjector = new DependencyInjector();
     $dispatcher = new Dispatcher($dependencyInjector);
     $viewManager = new ViewManager($dependencyInjector);
     $voltTemplateEngine = new VoltTemplateEngine($viewManager, $dependencyInjector);
 
+    $dependencyInjector->set('config', function() { return new Config( require DATADIR . 'config.php' ); } );
     $dependencyInjector->set('dispatcher', $dispatcher);
     $dependencyInjector->set('router', 'Write\\Resources\\Router');
     $dependencyInjector->set('session', 'Write\\Resources\\SessionManager');
