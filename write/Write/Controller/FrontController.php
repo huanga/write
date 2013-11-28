@@ -37,7 +37,23 @@ class FrontController extends AbstractController
             }
 
             return $pagebody;
+        } else if (is_dir($path)) {
+            // Directory for category
+            $allPages = new FileListCache( $this->di, $path );
 
+            $pagebody = '';
+            $shown = 0;
+            foreach ($allPages as $mdPath => $lastUpdated) {
+                $localPath = substr($mdPath, 0, -3); // Remove .md
+                $pagebody .= $this->_getContent($localPath);
+                $shown++;
+
+                if ($shown > 30) {
+                    break;
+                }
+            }
+
+            return $pagebody;
         } else {
             return null;
         }
@@ -76,7 +92,7 @@ class FrontController extends AbstractController
             throw new NotFoundException( '404 Not found!' );
         }
 
-	$this->view->pick('Front/get');
+        $this->view->pick('Front/get');
         $this->view->setVar('pagebody', $pagebody);
     }
 

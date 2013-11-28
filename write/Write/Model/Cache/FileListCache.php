@@ -8,9 +8,16 @@ use Write\Model\AbstractPhalconCache;
 
 class FileListCache extends AbstractPhalconCache
 {
+    private $path;
+
     protected function _initialize()
     {
         $this->setListByNames();
+    }
+
+    public function __construct( $di, $path = null ) {
+        $this->path = ( $path === null ) ? DATADIR : $path;
+        parent::__construct( $di );
     }
 
     /**
@@ -33,8 +40,7 @@ class FileListCache extends AbstractPhalconCache
             return $this;
         } else {
             if ($listByNames === null) {
-                $path = DATADIR;
-                $directory = new RecursiveDirectoryIterator($path);
+                $directory = new RecursiveDirectoryIterator($this->path);
                 $iterator = new RecursiveIteratorIterator($directory);
                 $files = new RegexIterator($iterator, '/^.+\.md$/i', \RecursiveRegexIterator::GET_MATCH);
 
