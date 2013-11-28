@@ -2,3 +2,4 @@ vendor
 .idea
 .vagrant
 cache
+write/data

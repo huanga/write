@@ -31,7 +31,8 @@ function __qdb_showall() {
 }
 
 function __qdb_hideall() {
-    $('#contents').find('ul').empty();
+    $('#contents').empty();
+    $('#contents').append( '<ul></ul>' );
 }
 
 function qdb_filter( keyword ) {
@@ -60,4 +61,5 @@ $('#searchform').submit(function( event ) {
 
 
 // Init page
+__qdb_hideall();
 __qdb_showall();
