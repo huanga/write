@@ -11,7 +11,8 @@
     "require" : {
 	    "kzykhys/ciconia": "dev-master",
 	    "phalcon/incubator": "dev-master",
-        "phalcon/devtools": "dev-master"
+        "phalcon/devtools": "dev-master",
+	    "erusev/parsedown": "dev-master"
     },
     "autoload" : {
         "psr-0" : {
