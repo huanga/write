@@ -1,4 +1,5 @@
 // Setup Filtering Tool
+var lastKeyword = '';
 var qdb = new Array();
 $('#contents').find('ul > li').each(function() {
     var question = $(this).find('h2').html();
@@ -28,6 +29,10 @@ function __qdb_add_dom( node ) {
 }
 
 function __qdb_showall() {
+    if (lastKeyword != '') {
+        ga('send', 'event', 'Search', 'Filter', lastKeyword);
+    }
+    ga('send', 'event', 'Search', 'Reset');
     $.each( qdb, function() {
         __qdb_add_dom( $(this)[0].node );
     });
@@ -43,6 +48,8 @@ function qdb_filter( keyword ) {
         __qdb_showall();
     } else {
         __qdb_hideall();
+
+        lastKeyword = keyword;
 
         var aMatches = qdb.filter(function(item) {
             var a = item.answer;
