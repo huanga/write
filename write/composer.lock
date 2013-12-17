@@ -3,34 +3,79 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "76b445e3956c32947856794556fa91ed",
+    "hash": "3328b09529229c77fdb81789cfa584b1",
     "packages": [
+        {
+            "name": "erusev/parsedown",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "0f027dc04bf6a56ce54b3be8617e4d46f44ca59c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/0f027dc04bf6a56ce54b3be8617e4d46f44ca59c",
+                "reference": "0f027dc04bf6a56ce54b3be8617e4d46f44ca59c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2013-12-15 22:56:12"
+        },
         {
             "name": "kzykhys/ciconia",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kzykhys/Ciconia.git",
-                "reference": "4447340fb0b0d71e75825596257b3d53d0d27c44"
+                "reference": "7b9c3ed96ea88479200c6a62b47e3b4332e1631b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kzykhys/Ciconia/zipball/4447340fb0b0d71e75825596257b3d53d0d27c44",
-                "reference": "4447340fb0b0d71e75825596257b3d53d0d27c44",
+                "url": "https://api.github.com/repos/kzykhys/Ciconia/zipball/7b9c3ed96ea88479200c6a62b47e3b4332e1631b",
+                "reference": "7b9c3ed96ea88479200c6a62b47e3b4332e1631b",
                 "shasum": ""
             },
             "require": {
                 "php": ">5.4.0",
-                "symfony/console": "2.3.x",
-                "symfony/options-resolver": "2.3.x"
+                "symfony/console": "~2.3",
+                "symfony/options-resolver": "~2.3"
             },
             "require-dev": {
-                "symfony/finder": "2.3.x"
+                "symfony/finder": "~2.3",
+                "symfony/stopwatch": "~2.3"
             },
             "bin": [
                 "bin/ciconia"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "": "src/"
@@ -52,7 +97,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2013-11-08 11:39:03"
+            "time": "2013-12-13 04:53:46"
         },
         {
             "name": "phalcon/devtools",
@@ -60,12 +105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon/phalcon-devtools.git",
-                "reference": "7280f2c4f56080744014b7bf36351a5ab83a9f7d"
+                "reference": "ec23cc5e3862bdb60ca9f2b823cff734dda595e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon/phalcon-devtools/zipball/7280f2c4f56080744014b7bf36351a5ab83a9f7d",
-                "reference": "7280f2c4f56080744014b7bf36351a5ab83a9f7d",
+                "url": "https://api.github.com/repos/phalcon/phalcon-devtools/zipball/ec23cc5e3862bdb60ca9f2b823cff734dda595e5",
+                "reference": "ec23cc5e3862bdb60ca9f2b823cff734dda595e5",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +138,7 @@
                 "framework",
                 "phalcon"
             ],
-            "time": "2013-11-08 18:48:10"
+            "time": "2013-11-30 19:13:28"
         },
         {
             "name": "phalcon/incubator",
@@ -101,15 +146,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon/incubator.git",
-                "reference": "2c346fd185371747a9de91f294485f72393c1f9a"
+                "reference": "23916dd82304c9b381c57e21f67e71a69f80233a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon/incubator/zipball/2c346fd185371747a9de91f294485f72393c1f9a",
-                "reference": "2c346fd185371747a9de91f294485f72393c1f9a",
+                "url": "https://api.github.com/repos/phalcon/incubator/zipball/23916dd82304c9b381c57e21f67e71a69f80233a",
+                "reference": "23916dd82304c9b381c57e21f67e71a69f80233a",
                 "shasum": ""
             },
             "require": {
+                "ext-phalcon": "1.2.4",
                 "php": ">=5.3.6"
             },
             "type": "library",
@@ -134,21 +180,21 @@
                 "framework",
                 "phalcon"
             ],
-            "time": "2013-11-05 10:25:21"
+            "time": "2013-12-10 12:46:00"
         },
         {
             "name": "symfony/console",
-            "version": "2.3.x-dev",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "38f924338419db1ce147ef39fff1265ee64faa81"
+                "reference": "ff8d5444c1b4dc7675aaeecd35f7ed1f0872c242"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/38f924338419db1ce147ef39fff1265ee64faa81",
-                "reference": "38f924338419db1ce147ef39fff1265ee64faa81",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/ff8d5444c1b4dc7675aaeecd35f7ed1f0872c242",
+                "reference": "ff8d5444c1b4dc7675aaeecd35f7ed1f0872c242",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +209,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -187,21 +233,21 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-11-05 15:14:13"
+            "time": "2013-11-28 10:27:35"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "2.3.x-dev",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/OptionsResolver",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/OptionsResolver.git",
-                "reference": "d7a1df61ce5cb0c9c9e502f959d4d8ede532439a"
+                "reference": "6f6554d4fd3cb0f39300473829b10390ae83e970"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/d7a1df61ce5cb0c9c9e502f959d4d8ede532439a",
-                "reference": "d7a1df61ce5cb0c9c9e502f959d4d8ede532439a",
+                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/6f6554d4fd3cb0f39300473829b10390ae83e970",
+                "reference": "6f6554d4fd3cb0f39300473829b10390ae83e970",
                 "shasum": ""
             },
             "require": {
@@ -210,7 +256,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -239,7 +285,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2013-09-19 09:45:20"
+            "time": "2013-11-24 20:17:07"
         }
     ],
     "packages-dev": [
@@ -252,7 +298,8 @@
     "stability-flags": {
         "kzykhys/ciconia": 20,
         "phalcon/incubator": 20,
-        "phalcon/devtools": 20
+        "phalcon/devtools": 20,
+        "erusev/parsedown": 20
     },
     "platform": [
 
