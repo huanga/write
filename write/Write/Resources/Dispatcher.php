@@ -9,6 +9,6 @@ class Dispatcher extends AbstractResource
     {
         $this->_instance = new PhalconDispatcher();
         $this->_instance->setDefaultNameSpace('Write\Controller');
-        $this->_instance->setDI($di);
+        $this->_instance->setDI($di->getInstance());
     }
 }
