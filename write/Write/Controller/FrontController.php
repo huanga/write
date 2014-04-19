@@ -61,7 +61,6 @@ class FrontController extends AbstractController
 
     protected function _renderMarkdown($md)
     {
-        /*
         $ciconia = new Ciconia();
         $ciconia->addExtension(new Gfm\FencedCodeBlockExtension());
         $ciconia->addExtension(new Gfm\TaskListExtension());
@@ -70,8 +69,6 @@ class FrontController extends AbstractController
         $ciconia->addExtension(new Gfm\TableExtension());
 
         $rendered = $ciconia->render($md);
-        */
-        $rendered = Parsedown::instance()->parse($md);
 
         return $rendered;
     }
