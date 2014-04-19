@@ -3,7 +3,7 @@ namespace Write\Resources;
 
 use Phalcon\Mvc\View\Engine\Volt as PhalconVoltEngine;
 
-class VoltTemplateEngine extends AbstractResource
+class VoltTemplateEngine extends GenericPhalconResource
 {
     public function __construct($view, DependencyInjector $di)
     {

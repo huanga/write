@@ -29,10 +29,4 @@ class AbstractResource
         return $this->_instance->$name;
     }
 
-    /**
-     * @return mixed                The underlying instance
-     */
-    public function getInstance() {
-        return $this->_instance;
-    }
 }

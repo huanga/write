@@ -3,7 +3,7 @@ namespace Write\Resources;
 
 use Phalcon\Mvc\View as PhalconViewManager;
 
-class ViewManager extends AbstractResource
+class ViewManager extends GenericPhalconResource
 {
     public function __construct(DependencyInjector $di)
     {
@@ -14,6 +14,6 @@ class ViewManager extends AbstractResource
                 '.volt' => 'Write\Resources\VoltTemplateEngine'
             )
         );
-        $this->_instance->setDI($di);
+        $this->setDI($di);
     }
 }

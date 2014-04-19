@@ -3,7 +3,7 @@ namespace Write\Resources;
 
 use Phalcon\Session\Adapter\Files as PhalconSessionAdapter;
 
-class SessionManager extends AbstractResource
+class SessionManager extends GenericPhalconResource
 {
     public function __construct()
     {

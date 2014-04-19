@@ -2,8 +2,9 @@
 namespace Write\Resources;
 
 use Phalcon\Mvc\Router as PhalconRouter;
+use Phalcon\Mvc\RouterInterface;
 
-class Router extends AbstractResource
+class Router extends GenericPhalconResource implements RouterInterface
 {
     public function __construct()
     {
